@@ -11,23 +11,23 @@
 	ul
 		display: flex
 		flex-direction: column
-		text-align: center
-		height: 100vh
 		justify-content: space-around
+		height: 100vh
 
 	li
-		flex: 
-			grow: 1
-			shrink: 1
-			basis: auto
+		flex: 1 1 auto
 		border-bottom: 1px solid rgba(0, 0, 0, .15)
 		display: flex
-		align-items: center
-		justify-content: center
+		
 
 	a
-	text-decoration: none
-	color: $text-inverse
+		color: $text-inverse
+		text-decoration: none
+		background: lightblue
+		flex-basis: 100%
+
+		&:hover
+			background: rgba(0, 0, 0, .10)
 
 	&.is-open
 		left: 0
@@ -60,10 +60,10 @@
 	transform: rotate(45deg)
 
 	&::after
-		transform: rotate(90deg)
+		transform: rotate(-90deg) translateX(2px)
 
 	&::before
-		display: none
+		opacity: 0
 
 
 
